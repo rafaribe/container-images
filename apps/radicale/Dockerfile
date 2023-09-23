@@ -16,9 +16,9 @@ ENV \
 ENV \
     RADICALE_CONFIG_FILE=/config/config
 
-LABEL dev.bjw-s.image.target_platform=$TARGETPLATFORM
-LABEL dev.bjw-s.image.target_architecture=$TARGETARCH
-LABEL dev.bjw-s.image.target_os=$TARGETOS
+LABEL dev.rafaribe.image.target_platform=$TARGETPLATFORM
+LABEL dev.rafaribe.image.target_architecture=$TARGETARCH
+LABEL dev.rafaribe.image.target_os=$TARGETOS
 LABEL org.opencontainers.image.source="https://github.com/Kozea/Radicale"
 
 COPY ./config /app/config.default
@@ -38,7 +38,7 @@ RUN \
         tzdata \
     && python3 -m pip install --upgrade pip \
     && python3 -m pip install radicale==$VERSION passlib[bcrypt] \
-    && chown -R 568:568 /app \
+    && chown -R 1000:1000 /app \
     && chmod -R 755 /app \
     && mkdir -p /data \
     && chown -R kah:kah /data \
@@ -49,6 +49,6 @@ RUN \
         /root/.cargo \
         /tmp/*
 
-USER kah
+USER rafaribe
 COPY ./entrypoint.sh /entrypoint.sh
 CMD ["/entrypoint.sh"]

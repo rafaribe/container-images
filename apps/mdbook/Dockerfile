@@ -37,9 +37,9 @@ ARG TARGETPLATFORM
 ARG TARGETARCH
 ARG TARGETOS
 
-LABEL dev.bjw-s.image.target_platform=$TARGETPLATFORM
-LABEL dev.bjw-s.image.target_architecture=$TARGETARCH
-LABEL dev.bjw-s.image.target_os=$TARGETOS
+LABEL dev.rafaribe.image.target_platform=$TARGETPLATFORM
+LABEL dev.rafaribe.image.target_architecture=$TARGETARCH
+LABEL dev.rafaribe.image.target_os=$TARGETOS
 LABEL org.opencontainers.image.source="https://github.com/rust-lang/mdBook"
 
 ENV \

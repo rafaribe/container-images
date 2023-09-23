@@ -13,9 +13,9 @@ _A Collection of Container Images Optimized for Kubernetes_
 
 <div align="center">
 
-![GitHub Repo stars](https://img.shields.io/github/stars/bjw-s/container-images?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/bjw-s/container-images?style=for-the-badge)
-![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/bjw-s/container-images/scheduled-release.yaml?style=for-the-badge&label=Scheduled%20Release)
+![GitHub Repo stars](https://img.shields.io/github/stars/rafaribe/container-images?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/rafaribe/container-images?style=for-the-badge)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/rafaribe/container-images/scheduled-release.yaml?style=for-the-badge&label=Scheduled%20Release)
 
 </div>
 
@@ -42,7 +42,7 @@ Application Images are all built from the customer base images below, and will l
 Container | Channel | Image | Latest Tags
 --- | --- | --- | ---
 {% for image in app_images | sort(attribute='name') -%}
-[{{ image.name }}]({{ image.html_url }}) | {{ image.channel }} | ghcr.io/bjw-s/{{ image.name }} |
+[{{ image.name }}]({{ image.html_url }}) | {{ image.channel }} | ghcr.io/rafaribe/{{ image.name }} |
 {%- set space = joiner(" ") -%}
 {%- for tag in image.tags -%}
 {{ space() }}![{{ tag }}](https://img.shields.io/badge/{{ tag.replace("-", "--") }}-{% if tag == "latest" %}green{% else %}blue{% endif %}?style=flat-square)
@@ -50,12 +50,12 @@ Container | Channel | Image | Latest Tags
 {% endfor %}
 
 ### Base Images
-All Base Images are configured with a non-root user (`bjw-s:bjw-s`), and exposed `/data` and `/config` volumes, and use `tini` as an entrypoint to ensure proper signal handling.
+All Base Images are configured with a non-root user (`rafaribe:rafaribe`), and exposed `/data` and `/config` volumes, and use `tini` as an entrypoint to ensure proper signal handling.
 
 Container | Channel | Image | Latest Tags
 --- | --- | --- | ---
 {% for image in base_images | sort(attribute='name') -%}
-[{{ image.name }}]({{ image.html_url }}) | {{ image.channel }} | ghcr.io/bjw-s/{{ image.name }} |
+[{{ image.name }}]({{ image.html_url }}) | {{ image.channel }} | ghcr.io/rafaribe/{{ image.name }} |
 {%- set space = joiner(" ") -%}
 {%- for tag in image.tags -%}
 {{ space() }}![{{ tag }}](https://img.shields.io/badge/{{ tag.replace("-", "--") }}-{% if tag == "latest" %}green{% else %}blue{% endif %}?style=flat-square)

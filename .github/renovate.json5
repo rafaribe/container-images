@@ -1,14 +1,14 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   extends: [
-    "github>bjw-s/renovate-config",
-    "github>bjw-s/renovate-config:automerge-github-actions",
+    "github>rafaribe/renovate-config",
+    "github>rafaribe/renovate-config:automerge-github-actions",
     ":automergeDigest",
   ],
   platform: "github",
-  username: "bjw-s-bot[bot]",
-  gitAuthor: "bjw-s-bot <87358111+bjw-s-bot[bot]@users.noreply.github.com>",
-  repositories: ["bjw-s/container-images"],
+  username: "rafaribe-bot[bot]",
+  gitAuthor: "rafaribe-bot <87358111+rafaribe-bot[bot]@users.noreply.github.com>",
+  repositories: ["rafaribe/container-images"],
   // regexManagers: [
   //   {
   //     description: "Process Dependencies",

@@ -6,9 +6,9 @@ ARG TARGETOS
 
 ARG VERSION
 
-LABEL dev.bjw-s.image.target_platform=$TARGETPLATFORM
-LABEL dev.bjw-s.image.target_architecture=$TARGETARCH
-LABEL dev.bjw-s.image.target_os=$TARGETOS
+LABEL dev.rafaribe.image.target_platform=$TARGETPLATFORM
+LABEL dev.rafaribe.image.target_architecture=$TARGETARCH
+LABEL dev.rafaribe.image.target_os=$TARGETOS
 LABEL org.opencontainers.image.source="https://github.com/pgaskin/kepubify"
 
 #hadolint ignore=DL3018,DL3013
@@ -24,5 +24,5 @@ RUN \
     && chown -R root:root /app \
     && chmod -R 755 /app
 
-USER kah
+USER rafaribe
 CMD [ "/app/kepubify" ]

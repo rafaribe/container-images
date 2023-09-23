@@ -1,5 +1,5 @@
 FROM ghcr.io/cdloh/calibre-bare:6.27.0@sha256:c28ac3f001daafce639cc4a39bd9e351c369d64531fac8c933bc5d2e889a6dab as calibre
-FROM ghcr.io/bjw-s/kepubify:4.0.4@sha256:54929a57509ee6d85cda13c97dadc7773a566d0cf0c5ed797a24c180b02182f7 as kepubify
+FROM ghcr.io/rafaribe/kepubify:4.0.4@sha256:54929a57509ee6d85cda13c97dadc7773a566d0cf0c5ed797a24c180b02182f7 as kepubify
 
 FROM ghcr.io/onedr0p/ubuntu:rolling@sha256:5bf9f96c104ba37f7cbe95396ab20439ca9f4c9456aaf81abfa9bc65b80d63b9
 
@@ -9,9 +9,9 @@ ARG TARGETOS
 
 ARG VERSION
 
-LABEL dev.bjw-s.image.target_platform=$TARGETPLATFORM
-LABEL dev.bjw-s.image.target_architecture=$TARGETARCH
-LABEL dev.bjw-s.image.target_os=$TARGETOS
+LABEL dev.rafaribe.image.target_platform=$TARGETPLATFORM
+LABEL dev.rafaribe.image.target_architecture=$TARGETARCH
+LABEL dev.rafaribe.image.target_os=$TARGETOS
 LABEL org.opencontainers.image.source="https://github.com/janeczku/calibre-web"
 
 ENV \
@@ -69,13 +69,13 @@ RUN \
         /tmp/* \
         /var/lib/apt/lists/* \
         /var/tmp/ \
-    && chown -R 568:568 /app \
+    && chown -R 1000:1000 /app \
     && chmod -R 755 /app \
     && printf "umask %d" "${UMASK}" >> /etc/bash.bashrc
 
 COPY --from=calibre / /opt/calibre
 COPY --from=kepubify /app/kepubify /opt/kepubify/kepubify
 
-USER kah
+USER rafaribe
 COPY ./entrypoint.sh /entrypoint.sh
 CMD ["/entrypoint.sh"]

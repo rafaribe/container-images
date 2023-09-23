@@ -26,10 +26,10 @@ on:
         type: boolean
         description: "Rebuild images regardless of whether version has changed"
     secrets:
-      BJWS_APP_ID:
+      RAFARIBE_APP_ID:
         description: "The ID of the GitHub App"
         required: true
-      BJWS_APP_PRIVATE_KEY:
+      RAFARIBE_APP_PRIVATE_KEY:
         description: "The private key of the GitHub App"
         required: true
 
@@ -57,8 +57,8 @@ jobs:
         uses: tibdex/github-app-token@v2
         id: generate-token
         with:
-          app_id: "${{ secrets.BJWS_APP_ID }}"
-          private_key: "${{ secrets.BJWS_APP_PRIVATE_KEY }}"
+          app_id: "${{ secrets.RAFARIBE_APP_ID }}"
+          private_key: "${{ secrets.RAFARIBE_APP_PRIVATE_KEY }}"
 
       - name: Prepare Matrices
         id: prepare-matrices
@@ -171,10 +171,10 @@ jobs:
           labels: |
             "org.opencontainers.image.title": "${{ matrix.image.name }}",
             "org.opencontainers.image.url": "https://ghcr.io/${{ github.repository_owner }}/${{ matrix.image.name }}",
-            "org.opencontainers.image.source": "https://github.com/bjw-s/container-images",
+            "org.opencontainers.image.source": "https://github.com/rafaribe/container-images",
             "org.opencontainers.image.version": "${{ matrix.image.version }}",
             "org.opencontainers.image.revision": "${{ github.sha }}",
-            "org.opencontainers.image.vendor": "bjw-s",
+            "org.opencontainers.image.vendor": "rafaribe",
 
       - name: Run Goss Tests
         id: dgoss
