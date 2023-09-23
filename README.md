@@ -41,13 +41,13 @@ Application Images are all built from the customer base images below, and will l
 
 Container | Channel | Image | Latest Tags
 --- | --- | --- | ---
-[calibre-web](https://github.com/rafaribe/container-images/pkgs/container/calibre-web) | stable | ghcr.io/rafaribe/calibre-web |![0.6.20](https://img.shields.io/badge/0.6.20-blue?style=flat-square) ![latest](https://img.shields.io/badge/latest-green?style=flat-square)
-[gatus](https://github.com/rafaribe/container-images/pkgs/container/gatus) | stable | ghcr.io/rafaribe/gatus |![5](https://img.shields.io/badge/5-blue?style=flat-square) ![5.5](https://img.shields.io/badge/5.5-blue?style=flat-square) ![5.5.1](https://img.shields.io/badge/5.5.1-blue?style=flat-square) ![latest](https://img.shields.io/badge/latest-green?style=flat-square)
-[getmail](https://github.com/rafaribe/container-images/pkgs/container/getmail) | stable | ghcr.io/rafaribe/getmail |![6.18.13](https://img.shields.io/badge/6.18.13-blue?style=flat-square) ![latest](https://img.shields.io/badge/latest-green?style=flat-square)
-[kepubify](https://github.com/rafaribe/container-images/pkgs/container/kepubify) | stable | ghcr.io/rafaribe/kepubify |![4.0.4](https://img.shields.io/badge/4.0.4-blue?style=flat-square) ![latest](https://img.shields.io/badge/latest-green?style=flat-square)
-[mdbook](https://github.com/rafaribe/container-images/pkgs/container/mdbook) | stable | ghcr.io/rafaribe/mdbook |![0.4.34](https://img.shields.io/badge/0.4.34-blue?style=flat-square) ![latest](https://img.shields.io/badge/latest-green?style=flat-square)
+[calibre-web]() | stable | ghcr.io/rafaribe/calibre-web |
+[gatus]() | stable | ghcr.io/rafaribe/gatus |
+[getmail]() | stable | ghcr.io/rafaribe/getmail |
+[kepubify]() | stable | ghcr.io/rafaribe/kepubify |
+[mdbook]() | stable | ghcr.io/rafaribe/mdbook |
 [paperless-ngx](https://github.com/rafaribe/container-images/pkgs/container/paperless-ngx) | stable | ghcr.io/rafaribe/paperless-ngx |![1.17.4](https://img.shields.io/badge/1.17.4-blue?style=flat-square) ![latest](https://img.shields.io/badge/latest-green?style=flat-square)
-[radicale](https://github.com/rafaribe/container-images/pkgs/container/radicale) | stable | ghcr.io/rafaribe/radicale |![3.1.8](https://img.shields.io/badge/3.1.8-blue?style=flat-square) ![latest](https://img.shields.io/badge/latest-green?style=flat-square)
+[radicale]() | stable | ghcr.io/rafaribe/radicale |
 
 
 ### Base Images
