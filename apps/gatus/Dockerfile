@@ -22,7 +22,7 @@ RUN \
     mkdir -p /config \
     && chown -R root:root /app \
     && chmod -R 755 /app \
-    && chown -R kah:kah /config \
+    && chown -R rafaribe:rafaribe /config \
     && chmod -R 755 /app
 
 USER rafaribe

@@ -41,7 +41,7 @@ RUN \
     && chown -R 1000:1000 /app \
     && chmod -R 755 /app \
     && mkdir -p /data \
-    && chown -R kah:kah /data \
+    && chown -R rafaribe:rafaribe /data \
     && chmod -R 775 /data \
     && apk del --purge build-dependencies \
     && rm -rf \
