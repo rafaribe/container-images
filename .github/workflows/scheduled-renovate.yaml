@@ -27,7 +27,7 @@ on:
 jobs:
   renovate:
     name: Renovate
-    uses: bjw-s/gh-workflows/.github/workflows/run-renovate.yaml@main
+    uses: bjw-s/gh-workflows/.github/workflows/run-renovate.yaml@b68286e569edaa804cc2854b88d325f7a00c9b15 # main
     with:
       configurationFile: ".github/renovate.json5"
       dryRun: ${{ inputs.dryRun || 'false' }}

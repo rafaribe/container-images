@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
       - uses: actions/setup-python@7f4fc3e22c37d6ff65e88745f38bd3157c663f7c # v4.9.1
-      - uses: pre-commit/action@v3.0.0
+      - uses: pre-commit/action@646c83fcd040023954eafda54b4db0192ce70507 # v3.0.0
         with:
           extra_args: --config .pre-commit-config.yaml
 
@@ -24,7 +24,7 @@ jobs:
         with:
           fetch-depth: 1
 
-      - uses: dorny/paths-filter@v2
+      - uses: dorny/paths-filter@4512585405083f25c027a35db413c2b3b9006d50 # v2
         id: filter
         with:
           list-files: shell
@@ -35,7 +35,7 @@ jobs:
 
       - name: "Yamllint"
         if: ${{ steps.filter.outputs.yaml == 'true' }}
-        uses: karancode/yamllint-github-action@master
+        uses: karancode/yamllint-github-action@4052d365f09b8d34eb552c363d1141fd60e2aeb2 # master
         with:
           yamllint_file_or_dir: "${{ steps.filter.outputs.yaml_files }}"
           yamllint_strict: false
@@ -50,7 +50,7 @@ jobs:
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
-      - uses: dorny/paths-filter@v2
+      - uses: dorny/paths-filter@4512585405083f25c027a35db413c2b3b9006d50 # v2
         id: filter
         with:
           list-files: shell
@@ -76,7 +76,7 @@ jobs:
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
-      - uses: dorny/paths-filter@v2
+      - uses: dorny/paths-filter@4512585405083f25c027a35db413c2b3b9006d50 # v2
         id: filter
         with:
           list-files: shell
@@ -86,6 +86,6 @@ jobs:
 
       - name: Validate Renovate Config
         if: ${{ steps.filter.outputs.renovate == 'true' }}
-        uses: rinchsan/renovate-config-validator@v0.0.12
+        uses: rinchsan/renovate-config-validator@1ea1e8514f6a33fdd71c40b0a5fa3512b9e7b936 # v0.0.12
         with:
           pattern: ".github/renovate.json5"
