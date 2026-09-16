@@ -45,7 +45,7 @@ Container | Channel | Image | Latest Tags
 [gatus]() | stable | ghcr.io/rafaribe/gatus |
 [getmail]() | stable | ghcr.io/rafaribe/getmail |
 [kepubify]() | stable | ghcr.io/rafaribe/kepubify |
-[mdbook]() | stable | ghcr.io/rafaribe/mdbook |
+[mdbook](https://github.com/rafaribe/container-images/pkgs/container/mdbook) | stable | ghcr.io/rafaribe/mdbook |![0.4.35](https://img.shields.io/badge/0.4.35-blue?style=flat-square) ![latest](https://img.shields.io/badge/latest-green?style=flat-square)
 [paperless-ngx](https://github.com/rafaribe/container-images/pkgs/container/paperless-ngx) | stable | ghcr.io/rafaribe/paperless-ngx |![1.17.4](https://img.shields.io/badge/1.17.4-blue?style=flat-square) ![latest](https://img.shields.io/badge/latest-green?style=flat-square)
 [radicale]() | stable | ghcr.io/rafaribe/radicale |
 
