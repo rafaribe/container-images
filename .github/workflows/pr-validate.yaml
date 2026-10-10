@@ -14,11 +14,11 @@ jobs:
   # Pin to main to prevent accidental injection of malicious code
   lint:
     name: Lint
-    uses: rafaribe/container-images/.github/workflows/workflow_call-lint.yaml@main
+    uses: rafaribe/container-images/.github/workflows/workflow_call-lint.yaml@9099b2676728099e53097313ab33bbd3cb23eb6d # main
 
   get-changed-images:
     name: Get changed images
-    uses: rafaribe/container-images/.github/workflows/workflow_call-get_changed_images.yaml@main
+    uses: rafaribe/container-images/.github/workflows/workflow_call-get_changed_images.yaml@9099b2676728099e53097313ab33bbd3cb23eb6d # main
 
   build-images:
     name: Build images
@@ -26,7 +26,7 @@ jobs:
       - lint
       - get-changed-images
     if: ${{ needs.get-changed-images.outputs.addedOrModified == 'true' }}
-    uses: rafaribe/container-images/.github/workflows/workflow_call-build_images.yaml@main
+    uses: rafaribe/container-images/.github/workflows/workflow_call-build_images.yaml@9099b2676728099e53097313ab33bbd3cb23eb6d # main
     secrets: inherit
     with:
       appsToBuild: "${{ needs.get-changed-images.outputs.addedOrModifiedImages }}"
